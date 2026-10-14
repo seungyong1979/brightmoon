@@ -34,3 +34,6 @@ footer .logos .logo-item img {
   footer .logos { gap: 8px; margin: 24px auto 20px; }
   footer .logos .logo-item img { height: 32px; max-height: 32px; }
 }
+
+/* Blend the ARTE logo background into the white footer. */
+footer .logos img[src$="arte.png"] { filter: brightness(1.04); mix-blend-mode: normal; }
