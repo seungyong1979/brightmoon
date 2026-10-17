@@ -37,3 +37,23 @@ footer .logos .logo-item img {
 
 /* Blend the ARTE logo background into the white footer. */
 footer .logos img[src$="arte.png"] { filter: brightness(1.04); mix-blend-mode: normal; }
+
+/* Keep the record label proportional and prevent mobile text inflation. */
+@media (max-width: 700px) {
+  .record-label { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  .record-label > span {
+    position: absolute; top: 16%; left: 0; width: 100%;
+    text-align: center; font-size: clamp(12px, 4.1vw, 16px);
+    line-height: 1.15; letter-spacing: 2px; white-space: nowrap;
+  }
+  .record-label > small {
+    position: absolute; top: 38%; left: 0; width: 100%;
+    text-align: center; font-size: 8px; line-height: 1.1;
+    letter-spacing: 2px; margin: 0;
+  }
+  .record-label > i { display: none; }
+  .record-label > em {
+    position: absolute; bottom: 12%; left: 8%; width: 84%;
+    font-size: 4px; line-height: 1.35; letter-spacing: .5px;
+  }
+}
